@@ -27,3 +27,4 @@ comments,	enhancements,	and	bug	fixes.
 Open	issues/bugs
 - The way I had to implement the Bubble sort function seems to be really inefficent.
 - Improve the printHashTable function. It is hard to visualize the hashTable 
+- the bubble sort for years freaks out when movies have the same year.

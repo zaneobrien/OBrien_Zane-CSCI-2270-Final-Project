@@ -21,6 +21,7 @@ How to Run:
   10. Print movies in time range
   11. Total Profit
   12. Quit
+  
   // The user can choose from all of these option
 
   // The most common input is inserting a movie
@@ -28,12 +29,19 @@ How to Run:
   // Here is an example of inserting a movie into the inventory
   
   1
+  
   Enter Title:
+  
   "Toy Story"
+  
   Enter Year:
+  
   1995
+  
   Enter price:
+  
   20
+  
   // this will enter "Toy Story" with a year of 1995 and a price of $20 into the inventory Hashtable
 
 

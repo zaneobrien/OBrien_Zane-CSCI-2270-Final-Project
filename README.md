@@ -6,6 +6,7 @@ Project	Summary:
   
 How to Run:
 To compile files use these commands: g++ -std=c++11 MovieSeller.cpp main.cpp -o main
+
 To run program: ./main
 
   The user is immediately prompted with a main menu:

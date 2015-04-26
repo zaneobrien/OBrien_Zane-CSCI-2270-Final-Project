@@ -46,22 +46,21 @@ How to Run:
 
 
 Dependencies:
-
   My program	does not rely on any third-party libraries that	needs	to	be	
 installed.
 
 System	Requirements:
-My program will run on Windows,	Mac, Linux?	There	are no additional	system	
+  My program will run on Windows,	Mac, Linux.	There	are no additional	system	
 requirements other than the operating	system.
 
 Group	Members:
   No group members
 
 Contributors:
-List	the	people	who	were	not	on	the	project	team,	but	may	have contributed	
+  List	the	people	who	were	not	on	the	project	team,	but	may	have contributed	
 comments,	enhancements,	and	bug	fixes.
 
 Open	issues/bugs
 - The way I had to implement the Bubble sort function seems to be really inefficent.
-- Improve the printHashTable function. It is hard to visualize the hashTable 
+- Improve the printHashTable function. It is hard to visualize the hashTable the way I did it
 - the bubble sort for years has a bug when there are movies with the same year.

@@ -8,7 +8,6 @@ struct Movie{
     int year;
     int price;
 
-
     Movie(){};
 
     Movie(std::string in_title, int in_year, int in_price)

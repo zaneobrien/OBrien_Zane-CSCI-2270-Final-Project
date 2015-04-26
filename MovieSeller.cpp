@@ -262,7 +262,7 @@ int MovieSeller::sellMovie(string s, MovieSeller& m)
  * ht.YearbubbleSort()
  *
  * \Precondition:
- *  years for each movie should be integers > 0
+ *  Years for each movie should be integers > 0
  *
  * \Postcondition:
  * prints the movies in Ascending order by year.
@@ -313,25 +313,25 @@ void MovieSeller::YearbubbleSort()
 
 
 /** \Function prototype:
- *  int MovieSeller::hashsum(string)
+ *  int MovieSeller::alphabeticalBubbleSort()
  *
  * \Function description:
- * This function calculates the hash code for a string by summing the ascii values of the individual elements of the string and % the sum by the size of the hash table.
+ * This function sorts the inventory of movies alphabetically using bubble sort.
  *
  * \Example:
  * HashTable ht
- * int sum = ht.hashsum("Toy Story")
+ * ht.alphabeticalBubbleSort()
  *
  * \Precondition:
- * hashLen is integer > 0. inputString is valid ascii string
+ * all titles of movies are valid strings
  *
  * \Postcondition:
- * returns non negative integer
+ * the movies in the inventory will sort alphabetically (A-Z)
  */
 void MovieSeller::alphabeticalBubbleSort()
 {
     vector <Movie*> titles;
-    for (int i = 0;i < len; i++)  // put all the years into a vector
+    for (int i = 0;i < len; i++)  // put all the titles into a vector
         {
                 for (int j = 0;j< hashTable[i].size();j++)
                 {
@@ -355,7 +355,7 @@ void MovieSeller::alphabeticalBubbleSort()
         }
     }
 
-
+    // print that titles
     for (int i = 0;i<titles.size();i++)
     {
         cout<<titles[i]->title<<":"<< titles[i]->year<<endl;
@@ -366,24 +366,24 @@ void MovieSeller::alphabeticalBubbleSort()
 
 
 /** \Function prototype:
- *  int MovieSeller::hashsum(string)
+ *  int MovieSeller::printTimeperiod(int, int)
  *
  * \Function description:
- * This function calculates the hash code for a string by summing the ascii values of the individual elements of the string and % the sum by the size of the hash table.
+ * This function prints movies if they are within a certain time range
  *
  * \Example:
  * HashTable ht
- * int sum = ht.hashsum("Toy Story")
+ * ht.printTimeperiod(1993,2001)
  *
  * \Precondition:
- * hashLen is integer > 0. inputString is valid ascii string
+ * the start year must be less than the end year
  *
  * \Postcondition:
- * returns non negative integer
+ *
  */
 void MovieSeller::printTimeperiod(int s, int e)
 {
-    for (int i = 0;i < len; i++)  // put all the years into a vector
+    for (int i = 0;i < len; i++)  // loop and if they are between the years inputed print them
         {
                 for (int j = 0;j< hashTable[i].size();j++)
                 {
@@ -393,10 +393,6 @@ void MovieSeller::printTimeperiod(int s, int e)
                     }
                 }
         }
-
-
-
-
 
 }
 

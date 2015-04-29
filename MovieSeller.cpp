@@ -275,7 +275,16 @@ void MovieSeller::YearbubbleSort()
         {
                 for (int j = 0;j< hashTable[i].size();j++)
                 {
-                    Years.push_back((hashTable[i])[j]->year);
+                    int temp = (hashTable[i])[j]->year;
+                    bool found = false;
+                    for(int k = 0; k < Years.size(); k++){
+                        if(Years[k] == temp){
+                            found = true;
+                        }
+                    }
+                    if(found == false){
+                        Years.push_back((hashTable[i])[j]->year);
+                    }
                 }
         }
 

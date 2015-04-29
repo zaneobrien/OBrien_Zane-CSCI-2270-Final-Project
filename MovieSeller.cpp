@@ -88,7 +88,7 @@ void MovieSeller::insertMovie(std::string in_title, int in_year, int in_price)
     else
     {
         vector<Movie*>::iterator it = hashTable[index].begin();
-        for(it; it != hashTable[index].end(); it++)
+        for(; it != hashTable[index].end(); it++)
         {
             //
             if((*it)->title.compare(in_title) >= 0)

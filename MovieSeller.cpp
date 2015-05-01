@@ -429,13 +429,16 @@ void MovieSeller::printHashTable()
         // if that place in the array in NULL
         if (hashTable[i].empty())
         {
-            cout<<"NULL"<<endl;
+		cout<<i<<": NULL"<<endl;
         }
-        // when there are movies print them
-        for (int j = 0;j< hashTable[i].size();j++)
-        {
-            cout << (hashTable[i])[j]->title << ":" <<(hashTable[i])[j]->year << endl;
-        }
+	else {
+		cout << i << ": " << endl;
+	        // when there are movies print them
+        	for (int j = 0;j< hashTable[i].size();j++)
+	        {
+	            cout << "\t" << (hashTable[i])[j]->title << " (" <<(hashTable[i])[j]->year << ")" << endl;
+	        }
+	}
     }
 
 }

@@ -35,6 +35,7 @@ class MovieSeller
         int sellMovie(std::string in_title, MovieSeller& m);
         void printTimeperiod(int startyear, int endyear);
         void printHashTable();
+        void readMoviesFromFile(std::string filename);
 
     protected:
     private:

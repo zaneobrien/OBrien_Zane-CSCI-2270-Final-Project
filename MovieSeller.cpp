@@ -1,6 +1,10 @@
 #include "MovieSeller.h"
 #include <vector>
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+#include <cstdlib>
 
 using namespace std;
 
@@ -441,4 +445,27 @@ void MovieSeller::printHashTable()
 	}
     }
 
+}
+void MovieSeller::readMoviesFromFile(string filename)
+{
+    string line;
+    string name;
+    string year;
+    string price;
+    int y;
+    int p;
+    ifstream newFile;
+    newFile.open(filename.c_str());
+    while(!newFile.eof())
+    {
+        getline(newFile,line);
+        stringstream ss(line);
+        getline(ss,name,',');
+        getline(ss,year,',');
+        getline(ss,price,',');
+        y = atoi(year.c_str());
+        p = atoi(price.c_str());
+        insertMovie(name,y,p);
+
+    }
 }

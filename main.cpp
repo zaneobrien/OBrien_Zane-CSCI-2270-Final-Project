@@ -1,6 +1,6 @@
 #include <iostream>
 #include "MovieSeller.h"
-
+#include <stdlib.h>
 
 
 using namespace std;
@@ -14,7 +14,7 @@ int main()
     MovieSeller f = MovieSeller(10);
     int profit = 0;
 
-    while( choice != "12" )
+    while( choice != "13" )
     {
 
     cout << "======Main Menu======" << endl;
@@ -29,7 +29,8 @@ int main()
     cout << "9. Show hash table" << endl;
     cout << "10. Print movies in time range" << endl;
     cout << "11. Total Profit" << endl;
-    cout << "12. Quit" << endl;
+    cout << "12. Read movies in from file" << endl;
+    cout << "13. Quit" << endl;
 
     getline(cin,choice);
 
@@ -44,10 +45,10 @@ int main()
             getline(cin,title);
             cout << "Enter year:" << endl;
             getline(cin,syear);
-            year = stoi(syear);
+            year = atoi(syear.c_str());
             cout<< "Enter price:"<<endl;
             getline(cin,sprice);
-            price = stoi(sprice);
+            price = atoi(sprice.c_str());
 
             h.insertMovie(title,year, price);
         }
@@ -114,14 +115,22 @@ int main()
             cout<<"End year: "<<endl;
             getline(cin,endyear);
 
-            h.printTimeperiod(stoi(startyear),stoi(endyear));
+            h.printTimeperiod(atoi(startyear.c_str()),atoi(endyear.c_str()));
         }
         else if (choice == "11")
         {
             cout<<"----------- Statement ------------"<<endl;
             cout<<"You have made: $" <<profit<<endl;
         }
+
         else if (choice == "12")
+        {
+            string fileName;
+            cout << "Enter filename:" << endl;
+            getline(cin,fileName);
+            h.readMoviesFromFile(fileName);
+        }
+        else if (choice == "13")
         {
             cout << "Goodbye!" << endl;
             break;

@@ -64,6 +64,6 @@ Contributors:
 comments,	enhancements,	and	bug	fixes.
 
 Open	issues/bugs
-- The way I had to implement the Bubble sort function seems to be really inefficent.
-- Improve the printHashTable function. It is hard to visualize the hashTable the way I did it
-- maybe add a feature to read movie in from a txt file
+- The way I had to implement the Bubble sort function seems to be really inefficent.      -fixed 
+- Improve the printHash Table funtion, hard to visualize the hashTable.                   - fixed 
+- maybe add a feature to read movie in from a txt file                                    - fixed
